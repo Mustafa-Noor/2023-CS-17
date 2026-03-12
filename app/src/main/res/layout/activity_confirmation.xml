@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Registration Confirmed"
+            app:titleTextColor="@color/primary_text"
+            app:titleCentered="true" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <!-- Success Animation / Icon Container -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardCornerRadius="50dp"
+                app:cardBackgroundColor="@color/primary_light"
+                app:cardElevation="0dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_sparkle"
+                    app:tint="@color/primary" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvSuccessMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You're all set!"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textAlignment="center"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your registration was submitted successfully."
+                android:textColor="@color/secondary_text"
+                android:textAlignment="center"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Details Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/CardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="24dp"
+                        app:cardCornerRadius="60dp"
+                        app:cardElevation="4dp"
+                        app:strokeWidth="4dp"
+                        app:strokeColor="@color/white">
+                        <ImageView
+                            android:id="@+id/ivConfirmedImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/smart_event_logo" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tvDispName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Full Name"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_text"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="24dp" />
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" android:layout_marginBottom="20dp" />
+
+                    <!-- Grid-like details -->
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="1">
+
+                        <TableRow android:layout_marginBottom="12dp">
+                            <TextView android:text="Phone" android:textColor="@color/secondary_text" android:textSize="14sp" />
+                            <TextView android:id="@+id/tvDispPhone" android:textAlignment="viewEnd" android:textColor="@color/primary_text" android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginBottom="12dp">
+                            <TextView android:text="Email" android:textColor="@color/secondary_text" android:textSize="14sp" />
+                            <TextView android:id="@+id/tvDispEmail" android:textAlignment="viewEnd" android:textColor="@color/primary_text" android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginBottom="12dp">
+                            <TextView android:text="Event" android:textColor="@color/secondary_text" android:textSize="14sp" />
+                            <TextView android:id="@+id/tvDispType" android:textAlignment="viewEnd" android:textColor="@color/primary" android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginBottom="12dp">
+                            <TextView android:text="Date" android:textColor="@color/secondary_text" android:textSize="14sp" />
+                            <TextView android:id="@+id/tvDispDate" android:textAlignment="viewEnd" android:textColor="@color/primary_text" android:textStyle="bold" />
+                        </TableRow>
+
+                        <TableRow>
+                            <TextView android:text="Gender" android:textColor="@color/secondary_text" android:textSize="14sp" />
+                            <TextView android:id="@+id/tvDispGender" android:textAlignment="viewEnd" android:textColor="@color/primary_text" android:textStyle="bold" />
+                        </TableRow>
+                    </TableLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:id="@+id/btnDone"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Return to Dashboard" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

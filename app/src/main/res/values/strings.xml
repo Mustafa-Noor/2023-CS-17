@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Smart Event Manager</string>
+    <string name="welcome_title">Welcome to Smart Event Manager</string>
+    <string name="welcome_desc">Easily register for upcoming seminars, conferences, and celebrations with just a few clicks.</string>
+    <string name="btn_register">Register for Event</string>
+    <string name="registration_title">Event Registration</string>
+    <string name="hint_full_name">Full Name</string>
+    <string name="hint_phone">Phone Number</string>
+    <string name="hint_email">Email Address</string>
+    <string name="label_event_type">Select Event Type:</string>
+    <string name="btn_select_date">Select Event Date</string>
+    <string name="label_gender">Gender:</string>
+    <string name="btn_upload_image">Upload Image</string>
+    <string name="cb_terms">Accept Terms and Conditions</string>
+    <string name="btn_submit">Submit Registration</string>
+    <string name="registration_complete">Registration Complete</string>
+    <string name="success_message">Your event registration has been submitted successfully.</string>
+</resources>
